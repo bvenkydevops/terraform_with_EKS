@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paraloyalpod
+spec:
+  selector:
+    matchLabels:
+      app: paraloyalpod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: paraloyalpod
+    spec:
+      containers:
+      - name: paraloyalcontainer
+        image: bojjavenkatesh67/paraloyal_task:latest
+        ports:
+        - containerPort: 80
