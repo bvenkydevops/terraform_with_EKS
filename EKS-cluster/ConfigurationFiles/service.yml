@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: paraloyalpod
+  name: nginxpod
   labels:
-    app: paraloyalpod
+    app: nginxpod
 spec:
   ports:
   - name: http
@@ -11,5 +11,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: paraloyalpod
+    app: nginxpod
   type: LoadBalancer
